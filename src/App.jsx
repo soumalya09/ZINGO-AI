@@ -192,7 +192,7 @@ function App() {
     const apiKey = import.meta.env.VITE_API_GENERATIVE_LANGUAGE_CLIENT;
     let attempts = 0;
     const maxAttempts = 30;
-    let delay = 2000;
+    let delay = 2000; 
 
     const systemInstructionParts = [];
     if (effectiveSettings.firstName) {

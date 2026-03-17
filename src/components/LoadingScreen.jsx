@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types"; 
 
 export const LoadingScreen = ({ onComplete }) => {
-  const [line1, setLine1] = useState("");
+  const [line1, setLine1] = useState(""); 
   const [line2, setLine2] = useState("");
 
   const text1 = "Hey, I'm Helpmate, your AI assistant.";

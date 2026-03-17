@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin, FaRocket } from "react-icons/fa";
-import PropTypes from "prop-types";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import PropTypes from "prop-types"; 
 
 const Footer = ({ darkMode }) => {
   return (
@@ -21,7 +21,7 @@ const Footer = ({ darkMode }) => {
         </a>
         <span className="text-gray-500 hidden sm:block">|</span>
         <a
-          href=""
+          href="https://github.com/soumalya09"
           target="_blank"
           rel="noopener noreferrer"
           className={`flex items-center gap-1 transition duration-300 ${

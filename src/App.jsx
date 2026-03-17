@@ -191,7 +191,7 @@ function App() {
 
     const apiKey = import.meta.env.VITE_API_GENERATIVE_LANGUAGE_CLIENT;
     let attempts = 0;
-    const maxAttempts = 3;
+    const maxAttempts = 30;
     let delay = 2000;
 
     const systemInstructionParts = [];
@@ -220,7 +220,7 @@ function App() {
     while (attempts < maxAttempts) {
       try {
         const response = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -308,14 +308,14 @@ function App() {
                   : "from-blue-400 to-indigo-500"
                   } flex items-center justify-center shadow-lg`}
               >
-                <span className="text-white font-bold text-lg">H</span>
+                <span className="text-white font-bold text-lg">Z</span>
               </div>
               <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  Helpmate AI
+                  Zingo AI
                 </h1>
                 <p className={`text-xs ${mutedText}`}>
-                  Your intelligent assistant
+                  Your personal assistant
                 </p>
               </div>
             </div>
@@ -362,7 +362,7 @@ function App() {
                 : "from-blue-400 to-indigo-500"
                 } flex items-center justify-center shadow-2xl animate-pulse`}
             >
-              <span className="text-white font-bold text-4xl">H</span>
+              <span className="text-white font-bold text-4xl">Z</span>
             </div>
             <div className="text-center">
               {/* Dynamic Greeting */}
@@ -377,7 +377,7 @@ function App() {
             {/* Hero Prompts */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-3xl mt-8">
               {[
-                "Write a poem about AI",
+                "Write a MCQ set for exam",
                 "Help me plan a trip",
                 "Tips for learning coding"
               ].map((prompt, i) => (
